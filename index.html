@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>// Un mensaje para ti</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- TEMPORALMENTE OCULTO PARA EDITAR -->
+    <div id="intro-screen" style="display:none;">
+      <div class="intro-content">
+        <div class="terminal-window intro-terminal">
+          <div class="terminal-header">
+            <span class="terminal-dot red"></span>
+            <span class="terminal-dot yellow"></span>
+            <span class="terminal-dot green"></span>
+            <span class="terminal-title">mensaje.js</span>
+          </div>
+          <div class="intro-letter">
+            <p>Hola, espero que todo bien y lo menos que quiero es molestar, pero necesitaba soltar esto, más de uno me colgaría por hacer esto, pero creo que tengo que hacerlo.</p>
+            <p>He decidido hacer esto para decirte unas cosas que la verdad, no quería que fuera un aburrido mensaje y awi, quería que fuera algo más interactivo y personal.</p>
+            <p>Lo dicho, al grano, si quieres seguir leyendo dale al botón de ejecutar programa, también se van a reproducir 2 temas, que creo que son más que suficientes mientras lees todo, prometo intentar no enrollarme mucho, intentar.</p>
+          </div>
+        </div>
+        <button id="enter-btn" class="enter-button">
+          <span class="btn-icon">▶</span> Ejecutar programa
+        </button>
+        <p class="intro-hint">🔊 Se reproducirá música</p>
+      </div>
+    </div>
+
+    <!-- Reproductor de música -->
+    <div id="music-player">
+      <button id="music-toggle" title="Pausar/Reanudar música">
+        <span id="music-icon">♫</span>
+      </button>
+      <span id="song-name">Canción sonando...</span>
+        <!-- YouTube Player (oculto) -->
+        <div id="yt-player-wrapper" style="position:fixed;bottom:-200px;left:-200px;width:1px;height:1px;overflow:hidden;pointer-events:none;">
+            <div id="yt-player"></div>
+        </div>
+    </div>
+
+    <!-- Contenido principal -->
+    <main id="main-content">
+
+      <!-- Sección: El año sin ella -->
+      <section class="story-section" id="section-loading">
+        <div class="section-inner">
+          <div class="loading-container">
+            <div class="loading-bar-wrapper">
+              <div class="loading-label" id="loading-label">Procesando ausencia...</div>
+              <div class="loading-bar">
+                <div class="loading-fill"></div>
+              </div>
+              <div class="loading-time" id="loading-time"></div>
+            </div>
+          </div>
+          <div class="code-block-wrapper">
+            <div class="terminal-window">
+              <div class="terminal-header">
+                <span class="terminal-dot red"></span>
+                <span class="terminal-dot yellow"></span>
+                <span class="terminal-dot green"></span>
+                <span class="terminal-title">espera.js — un año sin ti</span>
+              </div>
+              <div class="intro-letter">
+                <p>Vale, voy a empezar como pueda porque al final no quiero tampoco tocar mucho al pasado, porque lo que pasó pasó y ya está, ya lo acepté y aunque pasara pues ya cerré eso y como te dije, aquí no hay tirria ninguna.</p>
+                <p>Como puede suponerse lo pasé mal, muy mal, has sido la persona que más me ha dolido perder de toda mi vida por delante de cualquiera, y más cómo fue que se terminó. No tenía dinero suficiente para ir a ningún psicólogo, así que lo que hice fue centrarme y aprender de lo que pasó y cambiar a mejor. Me centré en los estudios, me metí en el gimnasio, empecé a salir a correr, me puse a trabajar en verano y aunque me costase, me puse a mejorar las cosas en las que fallé.</p>
+                <p>Verte con el chaval me mataba el alma, y te pensaba todos los días, no hubo un día que no pensara por la noche, y cuando me tatué otra vez fue justo en la fecha que hubiéramos estado en Roma, lo que más me dolió fue en tu cumpleaños, porque te ví en la esquina del colegio de la bici, iba a felicitarte pero cuando iba a salir una palabra de mi boca vi como me giraste la cara y eso me rompió una mijina por dentro.</p>
+                <p>Y ya mi colmo que fue ahí cuando creí que ya era un se acabó fue en fin de año que salí y apareciste ahí con Marina y los otros 3, y dije, mira esto es medianamente grandecito, no tengo porque verlos, pero pum, os pusisteis justo en frente, ahí me explotó la mente y dije, ya no más.</p>
+              </div>
+            </div>
+          </div>
+          <div class="film-reel-decoration">🎞️</div>
+        </div>
+      </section>
+
+
+
+      <!-- Sección 5: El reencuentro -->
+      <section class="story-section" id="section-reconnect">
+        <div class="section-inner">
+          <div class="reconnect-animation">
+            <div class="signal-icon">
+              <div class="signal-wave wave1"></div>
+              <div class="signal-wave wave2"></div>
+              <div class="signal-wave wave3"></div>
+              <div class="signal-dot"></div>
+            </div>
+            <p class="reconnect-status">Conexión restablecida ✓</p>
+          </div>
+          <div class="code-block-wrapper">
+            <div class="terminal-window success-terminal">
+              <div class="terminal-header">
+                <span class="terminal-dot red"></span>
+                <span class="terminal-dot yellow"></span>
+                <span class="terminal-dot green"></span>
+                <span class="terminal-title">reencuentro.js — volviste</span>
+              </div>
+              <div class="terminal-body">
+                <p class="code-line"><span class="comment">// Capítulo 5</span></p>
+                <p class="code-line"><span class="keyword">async function</span> <span class="function">reconectar</span>() {</p>
+                <p class="code-line">}</p>
+              </div>
+            </div>
+          </div>
+          <div class="narrative-text">
+            <p class="story-paragraph"></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección 6: Lo que siento / El final -->
+      <section class="story-section" id="section-final">
+        <div class="section-inner">
+          <div class="spotlight-effect"></div>
+          <div class="polaroid-grid">
+            <div class="polaroid">
+              <div class="polaroid-image"><img src="img/recuerdo1.jpg" alt="Recuerdo 1"></div>
+            </div>
+            <div class="polaroid">
+              <div class="polaroid-image"><img src="img/recuerdo2.jpg" alt="Recuerdo 2"></div>
+            </div>
+            <div class="polaroid">
+              <div class="polaroid-image"><img src="img/recuerdo3.jpg" alt="Recuerdo 3"></div>
+            </div>
+            <div class="polaroid">
+              <div class="polaroid-image"><img src="img/recuerdo4.jpg" alt="Recuerdo 4"></div>
+            </div>
+            <div class="polaroid">
+              <div class="polaroid-image"><img src="img/recuerdo5.jpg" alt="Recuerdo 5"></div>
+            </div>
+            <div class="polaroid">
+              <div class="polaroid-image"><img src="img/recuerdo6.jpg" alt="Recuerdo 6"></div>
+            </div>
+          </div>
+          <div class="code-block-wrapper">
+            <div class="terminal-window final-terminal">
+              <div class="terminal-header">
+                <span class="terminal-dot red"></span>
+                <span class="terminal-dot yellow"></span>
+                <span class="terminal-dot green"></span>
+                <span class="terminal-title"
+                  >sentimientos.js — lo que de verdad siento</span
+                >
+              </div>
+              <div class="terminal-body">
+                <p class="code-line"><span class="comment">// Último capítulo</span></p>
+                <p class="code-line"><span class="keyword">export default function</span> <span class="function">loQueSiento</span>() {</p>
+                <p class="code-line">}</p>
+              </div>
+            </div>
+          </div>
+          <div class="narrative-text final-narrative">
+            <p class="story-paragraph final-message"></p>
+          </div>
+          <div class="credits-roll">
+            <p class="credits-line">Dirigido por: <span>Mauri</span></p>
+            <p class="credits-line">Protagonista: <span>Marina</span></p>
+            <p class="credits-line">
+              Género: <span>Romance / Drama / Comedia</span>
+            </p>
+            <p class="credits-line">
+              Duración: <span>Espero que para siempre</span>
+            </p>
+            <p class="credits-line credits-final">
+              FIN...? 🎬
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Decoración de fondo -->
+    <div class="bg-particles" id="particles"></div>
+    <div class="film-grain"></div>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

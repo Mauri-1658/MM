@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- TEMPORALMENTE OCULTO PARA EDITAR -->
-    <div id="intro-screen" style="display:none;">
+    <!-- Pantalla de inicio / Click to enter -->
+    <div id="intro-screen">
       <div class="intro-content">
         <div class="terminal-window intro-terminal">
           <div class="terminal-header">
@@ -25,8 +25,8 @@
           </div>
           <div class="intro-letter">
             <p>Hola, espero que todo bien y lo menos que quiero es molestar, pero necesitaba soltar esto, más de uno me colgaría por hacer esto, pero creo que tengo que hacerlo.</p>
-            <p>He decidido hacer esto para decirte unas cosas que la verdad, no quería que fuera un aburrido mensaje y awi, quería que fuera algo más interactivo y personal.</p>
-            <p>Lo dicho, al grano, si quieres seguir leyendo dale al botón de ejecutar programa, también se van a reproducir 2 temas, que creo que son más que suficientes mientras lees todo, prometo intentar no enrollarme mucho, intentar.</p>
+            <p>He decidido hacer esto para decirte unas cosas que la verdad, no quería que fuera un aburrido mensaje y awi, quería que fuera algo más interactivo y hecho a mano.</p>
+            <p>Lo dicho, al grano, si quieres seguir leyendo dale al botón de ejecutar programa, prometo intentar no enrollarme mucho, intentar.</p>
           </div>
         </div>
         <button id="enter-btn" class="enter-button">
@@ -49,7 +49,7 @@
     </div>
 
     <!-- Contenido principal -->
-    <main id="main-content">
+    <main id="main-content" class="hidden">
 
       <!-- Sección: El año sin ella -->
       <section class="story-section" id="section-loading">
@@ -141,17 +141,38 @@
                   >sentimientos.js — lo que de verdad siento</span
                 >
               </div>
-              <div class="terminal-body">
-                <p class="code-line"><span class="comment">// Último capítulo</span></p>
-                <p class="code-line"><span class="keyword">export default function</span> <span class="function">loQueSiento</span>() {</p>
-                <p class="code-line">}</p>
+              <div class="intro-letter">
+                <p>Bueno, después de lo que pasó no pude ni pegar ojo, fui a Cala con 1h de sueño y encima para ir de fiesta. Y pues pasó lo que todo el mundo sabía, bajona porque jamás en la vida me esperaba lo que pasó, y momento rayaera, otra vez a temblar. Total, pasó y cuando me levanté pues te escribí para lo que te dije. Pero bueno pude entender que no fue plato de buen gusto ese mensaje, nunca mejor dicho.</p>
+                <p>El mensaje importante de todo esto es, se que te fallé, se que me equivoqué, y sobre todo, supongo que tu ya estas en otra onda, pero si no digo nada me podría arrepentir, aunque vaya a salir mal. Necesito soltar todo y serte sincero.</p>
+                <p>Creo poder decir que superé la relación que tuvimos, acepté, me perdoné por lo que te hice, acepté que estuvieras con otra persona, y seguí para adelante. Pero algo importante que por lo visto no he superado es a ti, a tu persona, eres demasiado y eso no se va tan fácil, al final eres la persona que más he querido en mi vida, y eras la persona más importante que he tenido, de cualquier cosa que hayan dicho de ti, te he defendido de decir, mira, si ella es feliz haciendo eso mejor, solo quiero que sea feliz ante todo, siempre me he preocupado por ti aunque no estuviera y hubiera hecho lo que fuera por ti, como lo del otro día.</p>
               </div>
             </div>
           </div>
-          <div class="narrative-text final-narrative">
-            <p class="story-paragraph final-message"></p>
+          <div class="heartbeat-separator">
+            <div class="heartbeat-line"></div>
+            <div class="heartbeat-icon">💜</div>
+            <div class="heartbeat-line"></div>
+          </div>
+          <div class="code-block-wrapper">
+            <div class="terminal-window final-terminal">
+              <div class="terminal-header">
+                <span class="terminal-dot red"></span>
+                <span class="terminal-dot yellow"></span>
+                <span class="terminal-dot green"></span>
+                <span class="terminal-title">final.js — Lo que quiero</span>
+              </div>
+              <div class="intro-letter">
+                <p>¿Qué es lo que busco con esto? Poder estar en tu vida, sé que no estás en tu mejor momento, y te dije que yo estaría en las malas y en las peores, porque significas demasiado para mi como para perderte para toda la vida, no querría eso. Me he saltado la promesa que te hice, no molestarte nunca más y que no supieras nada más de mi. E ahí una mentira que te he dicho, la que más me ha costado mantener. Te he echado de menos como no te puedes imaginar, y no sabes las veces que he soñado contigo y ya tenía el día echado.</p>
+                <p>No quiero explayarme mucho más, creo que ha sido suficiente, la respuesta ya me la imagino, pero la cosa es esa, pierdo poco porque el no ya lo tengo, pero si fuera un sí, lo que gano contigo no podría ni explicarlo con palabras.</p>
+                <p>Si has llegado hasta aquí, al menos darte las gracias por al menos leer lo que siento dentro, sea cual sea la respuesta.</p>
+                <p>No quiero mirar atrás, solo mirar al futuro y si tú estás ahí sería mucho más bonito. Ante todo algo que te decía mucho, te quiero, te adoro, quiero amarte y lo que más quiero en esta vida es estar enamorado de ti.</p>
+              </div>
+            </div>
           </div>
           <div class="credits-roll">
+            <p class="credits-line credits-final">
+              FIN...? 🎬
+            </p>
             <p class="credits-line">Dirigido por: <span>Mauri</span></p>
             <p class="credits-line">Protagonista: <span>Marina</span></p>
             <p class="credits-line">
@@ -160,9 +181,13 @@
             <p class="credits-line">
               Duración: <span>Espero que minimo un inicio de un acercamiento</span>
             </p>
-            <p class="credits-line credits-final">
-              FIN...? 🎬
+            <p class="credits-line">
+              Banda sonora: <span>Dícelo — Jay Wheeler · En Otra Vida — Funzo · Playa Privada — Mora</span>
             </p>
+            <p class="credits-line">
+              Extra: <span>Cuando cantó Mora Playa Privada, fue duro la verdad</span>
+            </p>
+            
           </div>
         </div>
       </section>

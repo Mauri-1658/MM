@@ -10,8 +10,15 @@ let pendingPlay = false; // true si el user hizo click antes de que YT cargase
 
 // Lista de canciones (añade o cambia IDs aquí)
 const playlist = [
-    '9fCiUt9Z60Q',  // Canción 1
-    '5AKWzn04BuU'   // Canción 2 — la que le dedicaste
+    '9fCiUt9Z60Q',  // Canción 1 — Dícelo (Jay Wheeler)
+    'yvcA6yGC1XE',  // Canción 2 — En la otra vida (Funzo)
+    '5AKWzn04BuU'   // Canción 3 — Playa Privada (Mora)
+];
+const startTimes = [0, 15, 0]; // segundo donde empieza cada canción
+const songNames = [
+    'Dícelo — Jay Wheeler',
+    'En la otra vida — Funzo',
+    'Playa Privada — Mora'
 ];
 let currentSongIndex = 0;
 
@@ -36,7 +43,7 @@ function onYouTubeIframeAPIReady() {
 
 function onPlayerReady(event) {
     playerReady = true;
-    ytPlayer.setVolume(-80);
+    ytPlayer.setVolume(5);
 
     // Si el user ya hizo click antes de que cargase, reproducir ahora
     if (pendingPlay) {
@@ -45,6 +52,8 @@ function onPlayerReady(event) {
         isPlaying = true;
         const toggle = document.getElementById('music-toggle');
         if (toggle) toggle.classList.add('playing');
+        const songLabel = document.getElementById('song-name');
+        if (songLabel) songLabel.textContent = songNames[currentSongIndex];
     }
 }
 
@@ -56,7 +65,9 @@ function onPlayerStateChange(event) {
         if (currentSongIndex >= playlist.length) {
             currentSongIndex = 0;
         }
-        ytPlayer.loadVideoById(playlist[currentSongIndex]);
+        ytPlayer.loadVideoById({videoId: playlist[currentSongIndex], startSeconds: startTimes[currentSongIndex]});
+        const songLabel = document.getElementById('song-name');
+        if (songLabel) songLabel.textContent = songNames[currentSongIndex];
     }
 }
 
@@ -108,6 +119,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 ytPlayer.playVideo();
                 isPlaying = true;
                 musicToggle.classList.add('playing');
+                const songLabel = document.getElementById('song-name');
+                if (songLabel) songLabel.textContent = songNames[currentSongIndex];
             } else {
                 // El player aún no está listo, marcar como pendiente
                 pendingPlay = true;

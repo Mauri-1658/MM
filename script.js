@@ -145,6 +145,19 @@ document.addEventListener('DOMContentLoaded', () => {
             musicToggle.classList.add('playing');
         }
     });
+
+    // --- SKIP SONG (Click en el nombre para saltar) ---
+    const songNameLabel = document.getElementById('song-name');
+    if (songNameLabel) {
+        songNameLabel.style.cursor = 'pointer';
+        songNameLabel.title = 'Click para saltar canción (Pruebas)';
+        songNameLabel.addEventListener('click', () => {
+            if (ytPlayer && playerReady) {
+                // Forzamos el estado ENDED para que pase a la siguiente
+                onPlayerStateChange({ data: YT.PlayerState.ENDED });
+            }
+        });
+    }
     // --- CONTADOR DE DÍAS DESDE EL 22 DE MARZO 2025 ---
     const fechaInicio = new Date(2025, 2, 22); // Marzo = 2 (0-indexed)
     const hoy = new Date();
